@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Billing Task</title>
+</head>
+<body>
+    item 1:<input type="text" id="id1">
+    <button onclick="get1()" type="button">Add Price</button><p id="id4"></p><br>
+    Item 2:<input type="text" id="id2">
+    <button onclick="get2()" type="button">Add Price</button><p id="id5"></p><br>
+    Item 3:<input type="text" id="id3">
+    <button onclick="get3()" type="button">Add Price</button><p id="id6"></p><br>
+    <button onclick="generate()" type="button">Generate</button>
+    <div id="output1"></div>
+    <div id="output2"></div>
+    <div id="output3"></div>
+    <div id="total"></div>
+    
+    <script>
+        function get1(){
+           document.getElementById('id4').innerHTML="<input id='id7'>"
+        }
+        function get2(){
+           document.getElementById('id5').innerHTML="<input id='id8'>"
+        }
+        function get3(){
+           document.getElementById('id6').innerHTML="<input id='id9'>"
+        }
+        function generate(){
+           var x=document.getElementById('id1').value;
+           var y=parseInt(document.getElementById('id7').value);
+           document.getElementById('output1').innerHTML="Item1:"+ x +" price is:" +y
+           
+           var a=document.getElementById('id2').value;
+           var b=parseInt(document.getElementById('id8').value);
+           document.getElementById('output2').innerHTML="Item2:"+ a +" price is:" +b
+           
+           var p=document.getElementById('id3').value;
+           var q=parseInt(document.getElementById('id9').value);
+           document.getElementById('output3').innerHTML="Item3:"+ p +" price is:" +q
+          
+           var sum=y+b+q
+           document.getElementById('total').innerHTML="total is:" +sum
+           
+        }
+
+    </script>
+    
+</body>
+</html>
