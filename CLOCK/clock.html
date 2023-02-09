@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <style>
+        #id {
+            width: 500px;
+            height: 100px;
+            margin:auto;
+            text-align: center;
+            background-color: aqua;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body onload="hit()">
+    <div class="card" >
+        <img src="img1.jpg" class="card-img" alt="..." height="568px" style="opacity: 0.4;" >
+        <div class="card-img-overlay" style="text-align:center; margin-top:120px;">
+            <h5 class="card-title">Time Zone Info for</h5>
+            <p class="card-text">
+            <h1>INDIA</h1>
+            </p>
+            <div id="id" onmouseover="over()" onmouseout="out()">
+              <div id="id1.date"></div>
+              <div id="id2.hours"></div>
+              <div id="id3.minutes"></div>
+              <div id="id4.seconds"></div>
+             </div>
+             <div id="id5">
+                  <h1> DELHI</h1>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+        <script >
+         function hit(){
+            a=new Date()
+            document.getElementById('id1.date').innerHTML=a
+            document.getElementById('id2.hours').innerHTML="HOURS:" +a.getHours()
+            document.getElementById('id3.minutes').innerHTML="MINUTES:" +a.getMinutes()
+            document.getElementById('id4.seconds').innerHTML="SECONDS:" +a.getSeconds()
+
+            x=setInterval(abc,2000)
+            y=setInterval(def,4000)
+            z=setInterval(pqr,6000)
+
+          }
+          setInterval(hit,1000)
+          function abc(){
+            document.getElementById('id5').style.color="yellow"
+          }
+
+          function def(){
+            document.getElementById('id5').style.color="red"
+          }
+
+          function pqr(){
+            document.getElementById('id5').style.color="green"
+          }
+
+          function over(){
+            document.getElementById('id').style.backgroundColor="pink"
+          }
+
+          function out(){
+            document.getElementById('id').style.backgroundColor="aqua"
+          }
+
+        </script>
+</body>
+
+</html>
